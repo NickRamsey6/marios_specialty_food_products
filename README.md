@@ -32,7 +32,7 @@ _For my fourth Ruby Code Review, I will be using Rails and Active Record to buil
 | Validate all review fields are filled in and output flash message | Review: Author: Bazooka Joe. Content: "Teddy told me that in Greek, “nostalgia” literally means “the pain from an old wound”. It’s a twinge in your heart far more powerful than memory alone. This gruel isn’t a spaceship, it’s a time machine. It goes backwards, forwards, takes us to a place where we ache to go again. It’s not called the wheel. It’s called gruel. It lets us travel the way a child travels. Round and around, and back home again, to a place where we know we are loved.", Rating: 5 | Validation: True, Author, Content and Rating all present |
 | Validate rating is an integer between 1 and 5 and output flash message | Rating: alhfdja | Validation: False, please enter a number between 1 and 5 |
 | Validate review content is between 50 and 250 characters and output flash message | Content: "sucked" | Validation: False, review must be between 50 and 250 characters |
-| Use callback to titleize all product names | Product: ice cream | Product: Ice Cream |
+| Use callback to title-ize all product names | Product: ice cream | Product: Ice Cream |
 
 
 ## Known Bugs (Initial, may change)
