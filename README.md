@@ -18,7 +18,7 @@ _For my fourth Ruby Code Review, I will be using Rails and Active Record to buil
 * _bundle install_
 
 
-## Specs (Initial, may change)
+## Specs (Initial, may change) -- UPDATE_
 
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
