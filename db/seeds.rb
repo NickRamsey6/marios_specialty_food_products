@@ -11,3 +11,10 @@ Product.destroy_all
   Product.create!(name: Faker::Food, price: Faker::Number.number(digits: 5), origin: Faker::Nation)
 end
 p "Created #{Product.count} products"
+
+# Review.destroy_all
+# p1 = Product.create(name: "apple pie", price: 10, origin: "USA")
+# 250.times do |index|
+#   Review.create!(author: Faker::Superhero.name, content_body: Faker::Quote.famous_last_words, rating: Faker::Number.between(from: 0, to: 5))
+# end
+# p "Created #{Review.count} reviews"
