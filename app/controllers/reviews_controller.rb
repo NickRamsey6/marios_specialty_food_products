@@ -9,9 +9,10 @@ class ReviewsController < ApplicationController
     @product = Product.find(params[:product_id])
     @review = @product.reviews.new(review_params)
     if @review.save
-      # flash[:notice] = "Review successfully added!"
+      flash[:notice] = "Review successfully added!"
       redirect_to product_path(@product)
     else
+      flash[:alert] = "Please fill out all fields!"
       render :new
     end
   end
@@ -39,7 +40,7 @@ class ReviewsController < ApplicationController
 
   def destroy
     @review = Review.find(params[:id])
-    review.destroy
+    @review.destroy
     redirect_to product_path(@review.product)
   end
 
