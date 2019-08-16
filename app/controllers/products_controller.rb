@@ -15,8 +15,10 @@ class ProductsController < ApplicationController
   def create
     @product = Product.create(product_params)
     if @product.save
+      flash[:notice] = "Product successfully created!"
       redirect_to products_path
     else
+      flash[:alert] = "Please fill out all fields!"
       render :new
     end
     # Code for creating a new product goes here.
