@@ -1,3 +1,17 @@
+<h3>Products with Most Reviews</h3>
+
+<% if @most_reviews.any? %>
+  <ul>
+    <% @most_reviews.each do |most| %>
+      <li><%= link_to most.name, product_path(most) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no products yet.</p>
+<% end %>
+
+
+
 <h3>Three Most Recent Products</h3>
 
 <% if @three_most_recent.any? %>
