@@ -5,16 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-# Product.destroy_all
-#
-# 50.times do |index|
-#   Product.create!(name: Faker::Food, price: Faker::Number.number(digits: 5), origin: Faker::Nation)
-# end
-# p "Created #{Product.count} products"
+Product.destroy_all
 
-# Review.destroy_all
-# p1 = Product.create(name: "apple pie", price: 10, origin: "USA")
+50.times do |index|
+  Product.create!(name: Faker::Food, price: Faker::Number.number(digits: 5), origin: Faker::Nation)
+end
+p "Created #{Product.count} products"
+
+# #
+# products = Product.all
 # 250.times do |index|
-#   Review.create!(author: Faker::Superhero.name, content_body: Faker::Quote.famous_last_words, rating: Faker::Number.between(from: 0, to: 5))
+#     Review.create!(author: Faker::Superhero.name, content_body: Faker::Lorem.characters(number: 50), rating: Faker::Number.between(from: 0, to: 5), product_id: products.id)
 # end
+# # # Review.destroy_all
 # p "Created #{Review.count} reviews"
