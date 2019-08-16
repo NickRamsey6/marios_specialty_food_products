@@ -10,4 +10,16 @@
   <p>There are no products yet.</p>
 <% end %>
 
+<h3>American Made Products</h3>
+
+<% if @made_in_the_usa.any? %>
+  <ul>
+    <% @made_in_the_usa.each do |usa| %>
+      <li><%= link_to usa.name, product_path(usa) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no American products yet.</p>
+<% end %>
+
 <p><%= link_to "See All Products", products_path %></p>
