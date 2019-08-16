@@ -8,7 +8,7 @@
 Product.destroy_all
 
 50.times do |index|
-  Product.create!(name: Faker::Food, price: Faker::Number.number(digits: 5), origin: Faker::Nation)
+  Product.create!(name: Faker::Food.dish, price: Faker::Number.number(digits: 2), origin: Faker::Address.country)
 end
 p "Created #{Product.count} products"
 
