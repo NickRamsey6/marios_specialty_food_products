@@ -12,9 +12,9 @@ describe "the add a product process" do
     expect(page).to have_content 'Skyline Chili'
   end
 
-  # it "gives an error when no name is entered" do
-  #   visit new_product_path
-  #   click_on 'Create Album'
-  #   expect(page).to have_content "Name can't be blank"
-  # end
+  it "gives an error when no name is entered" do
+    visit new_product_path
+    click_on 'Create Product'
+    expect(page).to have_content "Please fill out all fields"
+  end
 end
