@@ -8,14 +8,19 @@
 Product.destroy_all
 
 50.times do |index|
-  Product.create!(name: Faker::Food.dish, price: Faker::Number.number(digits: 2), origin: Faker::Address.country)
+  product = Product.create!(name: Faker::Food.dish, price: Faker::Number.number(digits: 2), origin: Faker::Address.country)
+  product.save
+  5.times do |r|
+    product.reviews.create!(author: Faker::Superhero.name, content_body: Faker::Lorem.characters(number: 50), rating: Faker::Number.between(from: 0, to: 5))
+    # product.reviews.save
+  end
 end
-p "Created #{Product.count} products"
+p "Created #{Product.count} products and #{Review.count} reviews"
 
 # #
 # products = Product.all
 # 250.times do |index|
-#     Review.create!(author: Faker::Superhero.name, content_body: Faker::Lorem.characters(number: 50), rating: Faker::Number.between(from: 0, to: 5), product_id: products.id)
+    # Review.create!(author: Faker::Superhero.name, content_body: Faker::Lorem.characters(number: 50), rating: Faker::Number.between(from: 0, to: 5), product_id: products.id)
 # end
 # # # Review.destroy_all
 # p "Created #{Review.count} reviews"
