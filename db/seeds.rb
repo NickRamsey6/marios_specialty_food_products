@@ -12,15 +12,6 @@ Product.destroy_all
   product.save
   5.times do |r|
     product.reviews.create!(author: Faker::Superhero.name, content_body: Faker::Lorem.characters(number: 50), rating: Faker::Number.between(from: 0, to: 5))
-    # product.reviews.save
   end
 end
 p "Created #{Product.count} products and #{Review.count} reviews"
-
-# #
-# products = Product.all
-# 250.times do |index|
-    # Review.create!(author: Faker::Superhero.name, content_body: Faker::Lorem.characters(number: 50), rating: Faker::Number.between(from: 0, to: 5), product_id: products.id)
-# end
-# # # Review.destroy_all
-# p "Created #{Review.count} reviews"
